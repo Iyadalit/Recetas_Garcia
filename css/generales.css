@@ -70,7 +70,8 @@
         }
         
         .navegador li a:hover {
-            border-bottom: solid 1px rgb(0, 102, 255);
+            /*animación del menú*/
+            border-bottom: solid 1px #45B39D;
         }
         
         .navegador li a {
@@ -127,9 +128,12 @@
         }
         /*===== INDEX =====*/
         
-        .containerPrincipal {
+        .containerPrincipal,
+        .containerContactoPrincipal,
+        .recetasPrincipal {
             padding: 130px 20px 0 20px;
-            background-color: rgb(216, 209, 209);
+            background-color: #D9AFD9;
+            background-image: linear-gradient(0deg, #cfb8cf 0%, #a5cdd1 100%);
         }
         
         .banner {
@@ -214,12 +218,6 @@
         }
         /*=====RECETAS =====*/
         
-        .containerPrincipal {
-            padding: 50px 20px 50px 20px;
-            margin-bottom: 20px;
-            background-color: rgb(216, 209, 209);
-        }
-        
         .containerReceta {
             display: flex;
             flex-direction: row;
@@ -254,7 +252,6 @@
         
         .recetasPrincipal {
             padding: 50px 20px 50px 20px;
-            margin-top: 70px;
             margin-bottom: 20px;
             background-color: rgb(216, 209, 209);
         }
@@ -276,6 +273,14 @@
         
         .imagenReceta {
             width: 50%;
+        }
+        
+        .zoom {
+            transition: all 0.2s ease;
+        }
+        
+        .zoom:hover {
+            transform: scale(1.1);
         }
         
         .imagenReceta img {
@@ -309,12 +314,6 @@
         }
         /*=====CONTACTO =====*/
         
-        .containerContactoPrincipal {
-            padding: 50px 20px 50px 20px;
-            margin-bottom: 20px;
-            background-color: rgb(216, 209, 209);
-        }
-        
         .container {
             margin-top: 30px;
             margin-bottom: 30px;
@@ -324,6 +323,17 @@
         
         .containerFormulario {
             width: 50%;
+        }
+        
+        input:focus {
+            /*para saber en que campo del contacto se encuentra*/
+            background-color: #45B39D;
+            color: #1C2833;
+        }
+        
+        textarea:focus {
+            background-color: #45B39D;
+            color: #1C2833;
         }
         
         .containerImg {
