@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat";
+    background-image: url("../assets/fondo.jpg");
+    background-size: cover;
+}
+
+.customNavbar {
+    background-color: rgba(249, 227, 222, .9) !important;
+    box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
+    -webkit-box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
+    -moz-box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
+}
+
+.logo {
+    width: 100px;
+}
+
+.fontDosis {
+    font-family: 'Dosis', sans-serif;
+}
+
+.fontLobster {
+    font-family: 'Lobster';
+}
+
+
+/*INDEX*/
+
+.layoutContent {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tituloBanner {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.tituloCarrusel {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+}
+
+.imgCarrusel {
+    width: 60%;
+    border-radius: 10%;
+    max-height: 400px;
+    box-shadow: 10px 10px 5px 0px rgba(142, 143, 176, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(142, 143, 176, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(142, 143, 176, 0.75);
+}
+
+
+/*CONTACTO*/
+
+.tituloContacto {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+/*FOOTER*/
+
+.containerContacto {
+    color: white;
+}
+
+.containerRedesSociales {
+    color: white;
+}
+
+.textFooter {
+    font-style: normal;
+    list-style: none;
+    font-weight: bold;
+}
+
+.redesSociales li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.redesSociales li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.redesSociales li a:hover {
+    color: rgb(185, 185, 185);
+}
