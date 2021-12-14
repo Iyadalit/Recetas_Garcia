@@ -31,6 +31,12 @@ body {
     font-family: 'Lobster';
 }
 
+.customNavbar ul li a:hover {
+    /*animación del menú*/
+    border-bottom: solid 1px #45B39D;
+    color: black !important;
+}
+
 
 /*INDEX*/
 
@@ -69,7 +75,28 @@ body {
     font-weight: bold;
 }
 
+input:focus {
+    /*para saber en que campo del contacto se encuentra*/
+    background-color: #e6f0ee !important;
+    color: #1C2833;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1)!important;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1)!important;
+}
 
+textarea:focus {
+    background-color: #e6f0ee !important;
+    color: #1C2833;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1)!important;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1)!important;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
 /*FOOTER*/
 
 .containerContacto {
