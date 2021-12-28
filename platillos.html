@@ -2,79 +2,137 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platillos</title>
-    <link rel="stylesheet" href="css/generales.css">
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="En este sitio encontrarás recetas de platillos de todas las culturas" />
+  <meta name="keywords" content="RECETAS, PLATILLOS, POSTRES, BEBIDAS, INGREDIENTES" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Platillos</title>
 </head>
 
 <body>
-    <div class="layout">
-        <div class="layoutHeader">
-            <div id="header">
-                <div class="containerLogo"><a href="index.html"><img class="logo" src="assets/logo.png" alt="logo de sitio"></a></div>
-                <div class="containerNavegador">
-                    <ul class="navegador">
-                        <!--estas son las secciones de mi proyecto-->
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="platillos.html">Platillos</a></li>
-                        <li><a href="bebidas.html">Bebidas</a></li>
-                        <li><a href="postres.html">Postres</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
+  <div class="layout">
+    <div class="layoutHeader">
+      <nav class="
+            navbar navbar-expand-lg navbar-light
+            bg-light
+            customNavbar
+            fixed-top
+          ">
+        <div class="container-fluid">
+          <a href="index.html"><img class="logo" src="assets/logo.png" alt="logo de sitio" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="platillos.html">Platillos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="bebidas.html">Bebidas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="postres.html">Postres</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="layoutContent">
-            <div class="recetasPrincipal">
-                <div class="cardReceta">
-                    <div class="imagenReceta zoom">
-                        <img src="assets/Pozole.jpg">
-                    </div>
-                    <div class="containerTextReceta">
-                        <p class="tituloReceta fontPoppins">Pozole</p>
-                        <p class="textReceta">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit accusamus tempore voluptates, dolorem ut corporis consequuntur porro deserunt doloribus in velit blanditiis perspiciatis, sint officia. Ex exercitationem minima, aut
-                            quibusdam!
-                        </p>
-                        <a href="recetas.html">Receta</a>
-                    </div>
-                </div>
-
-                <div class="cardReceta">
-                    <div class="containerTextReceta">
-                        <p class="tituloReceta fontPoppins">Birria</p>
-                        <p class="textReceta">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit accusamus tempore voluptates, dolorem ut corporis consequuntur porro deserunt doloribus in velit blanditiis perspiciatis, sint officia. Ex exercitationem minima, aut
-                            quibusdam!
-                        </p>
-                        <a href="recetas.html">Receta</a>
-                    </div>
-                    <div class="imagenReceta zoom">
-                        <img src="assets/Birria.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="layoutFooter">
-            <div id="footer">
-                <div class="containerContacto">
-                    <p class="tituloFooter fontPoppins">CONTACTO</p>
-                    <ul class="textFooter">
-                        <li>Teléfono</li>
-                        <li>Email</li>
-                        <li>Dirección</li>
-                    </ul>
-                </div>
-                <div class="containerRedesSociales">
-                    <p class="tituloFooter fontPoppins">REDES SOCIALES</p>
-                    <ul class="redesSociales textFooter">
-                        <li><a href="https://es-la.facebook.com/" target="__blank">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/" target="__blank">Instagram</a></li>
-                        <li> <a href="https://twitter.com/" target="__blank">Twitter</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      </nav>
     </div>
+
+    <div class="layoutContent">
+      <section class="container pb-5">
+        <h2 class="fontPoppins">Platillos</h2>
+        <article class="row cardReceta">
+          <div class="col-md-6 imagenReceta order-2 order-md-1 zoom">
+            <img src="assets/Birria.jpg" alt="Plato de birria"/>
+          </div>
+          <div class="col-md-6 order-1 order-md-2">
+            <p class="tituloReceta fontPoppins">Birria</p>
+            <p class="textReceta">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+              accusamus tempore voluptates, dolorem ut corporis consequuntur
+              porro deserunt doloribus in velit blanditiis perspiciatis, sint
+              officia. Ex exercitationem minima, aut quibusdam!
+            </p>
+            <a href="recetas.html">Receta</a>
+          </div>
+        </article>
+
+        <article class="row">
+          <div class="col-md-6">
+            <p class="tituloReceta fontPoppins">Pozole</p>
+            <p class="textReceta">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+              accusamus tempore voluptates, dolorem ut corporis consequuntur
+              porro deserunt doloribus in velit blanditiis perspiciatis, sint
+              officia. Ex exercitationem minima, aut quibusdam!
+            </p>
+            <a href="recetas.html">Receta</a>
+          </div>
+          <div class="col-md-6 imagenReceta zoom">
+            <img  src="assets/Pozole.jpg" alt="Pozole rojo platillo mexicano" />
+          </div>
+        </article>
+      </section>
+    </div>
+    <div class="layoutFooter">
+      <div id="footer">
+        <div class="row bg-dark">
+          <div class="col-md-6">
+            <div class="containerContacto">
+              <h5 class="tituloFooter fontPoppins">CONTACTO</h5>
+              <ul class="textFooter">
+                <li>Tel. 55 55 55 55 55</li>
+                <li>recetas@yopmail.com</li>
+                <li>Polanco, CDMX</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="
+                  containerRedesSociales
+                  d-flex
+                  flex-column
+                  align-items-center
+                ">
+              <h5 class="tituloFooter fontPoppins">REDES SOCIALES</h5>
+              <ul class="redesSociales textFooter p-0">
+                <li class="zoom">
+                  <a href="https://es-la.facebook.com/" target="__blank"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="zoom">
+                  <a href="https://www.instagram.com/" target="__blank"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="zoom">
+                  <a href="https://twitter.com/" target="__blank"><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/dafdd4d29d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 </body>
 
 </html>

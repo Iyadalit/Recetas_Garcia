@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Montserrat";
+  background-image: url("../assets/fondo.jpg");
+  background-size: cover; }
+
+/*generales*/
+.layout {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 100%; }
+
+.layoutHeader {
+  grid-area: header; }
+
+.layoutContent {
+  grid-area: main;
+  padding-top: 150px;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.layoutFooter {
+  grid-area: footer; }
+
+/*Header*/
+#header {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: #fcf9f9;
+  z-index: 100; }
+
+.customNavbar {
+  background-color: rgba(249, 227, 222, 0.9) !important;
+  box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
+  -webkit-box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
+  -moz-box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65); }
+
+.logo {
+  width: 100px; }
+
+.fontDosis {
+  font-family: "Dosis", sans-serif; }
+
+.fontLobster {
+  font-family: "Lobster"; }
+
+.customNavbar ul li a:hover {
+  /*animación del menú*/
+  border-bottom: solid 1px #45b39d;
+  color: black !important; }
+
+/*Platillos*/
+.recetasPrincipal {
+  padding: 50px 20px 50px 20px;
+  background-color: #d8d1d1; }
+
+.cardReceta {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .cardReceta a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    color: #0b055a; }
+
+.imagenReceta img {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-radius: 50px; }
+
+.zoom {
+  transition: all 0.2s ease; }
+  .zoom:hover {
+    transform: scale(1.1); }
+
+.containerTextReceta {
+  right: 0;
+  width: 50%; }
+
+.tituloReceta {
+  font-style: normal;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 10px;
+  color: #0b055a; }
+
+.textReceta {
+  font-size: 16px;
+  font-style: normal;
+  text-align: center;
+  font-weight: bold; }
+
+/*footer*/
+.containerContacto {
+  color: white; }
+
+.containerRedesSociales {
+  color: white; }
+
+.textFooter {
+  font-style: normal;
+  list-style: none;
+  font-weight: bold; }
+
+.redesSociales li {
+  display: inline-block;
+  margin: 0 10px; }
+  .redesSociales li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px; }
+    .redesSociales li a:hover {
+      color: #b9b9b9; }
+
+.containerReceta {
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  min-height: 70vh; }
+
+.containerPorciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .containerPorciones img {
+    width: 100%;
+    border-radius: 50px; }
+  .containerPorciones table {
+    margin-top: 15px;
+    padding: 2rem;
+    background-color: #ccb96e; }
+
+.tituloBanner {
+  font-size: 30px;
+  font-style: normal;
+  text-align: center;
+  font-weight: bold; }
+
+.tituloCarrusel {
+  font-size: 30px;
+  font-style: normal;
+  text-align: center;
+  font-weight: bold; }
+
+.imgCarrusel {
+  width: 60%;
+  border-radius: 10%;
+  max-height: 400px;
+  box-shadow: 10px 10px 5px 0px rgba(142, 143, 176, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(142, 143, 176, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(142, 143, 176, 0.75); }

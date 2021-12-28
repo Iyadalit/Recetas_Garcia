@@ -1,0 +1,25 @@
+.containerReceta {
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    min-height: 70vh;
+}
+
+.containerPorciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 100%;
+        border-radius: 50px;
+    }
+    table {
+        margin-top: 15px;
+        padding: 2rem;
+        background-color: rgb(204, 185, 110);
+    }
+    
+}
+
