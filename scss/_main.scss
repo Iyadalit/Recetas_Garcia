@@ -5,147 +5,106 @@
 
 body {
     font-family: "Montserrat";
-    background-image: url("../assets/fondo.jpg");
-    background-size: cover;
+    background-color: #e5e5e5;
 }
 
-/*generales*/
-.layout {
-    display: grid;
-    grid-template-areas: "header" "main" "footer";
-    grid-template-columns: 100%;
-}
+h1{
+    @include fontBlack;
+    font-size: map-get($fontSize, l);
+    font-weight: map-get($fontWeight, semibold);
 
-.layoutHeader {
-    grid-area: header;
-}
-
-.layoutContent {
-    grid-area: main;
-    padding-top: 150px;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.layoutFooter {
-    grid-area: footer;
-}
-/*Header*/
-#header {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    background-color: $bgColorHeader;
-    z-index: 100;
-}
-
-.customNavbar {
-    background-color: rgba(249, 227, 222, 0.9) !important;
-    box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
-    -webkit-box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
-    -moz-box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
-}
-
-.logo {
-    width: 100px;
-}
-
-.fontDosis {
-    font-family: "Dosis", sans-serif;
-}
-
-.fontLobster {
-    font-family: "Lobster";
-}
-
-.customNavbar ul li a:hover {
-    /*animación del menú*/
-    border-bottom: solid 1px #45b39d;
-    color: black !important;
-}
-
-/*Platillos*/
-
-.recetasPrincipal {
-    padding: 50px 20px 50px 20px;
-    background-color: $bgColor;
-}
-
-.cardReceta {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    a {
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
-        font-style: italic;
-        color: $colorReceta;
+    @media (min-width: $breakpoint-tablet) {
+        font-size: map-get($fontSize, xl);
     }
 }
 
-.imagenReceta { 
-    img{
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        border-radius: 50px;
+h2{
+    @include fontBlack;
+    font-size: map-get($fontSize, md);
+    font-weight: map-get($fontWeight, regular); 
+
+    @media (min-width: $breakpoint-tablet) {
+        font-size: map-get($fontSize, l);
+    }
+}
+
+.customNavbar {
+    box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
+    -webkit-box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
+    -moz-box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
+
+    ul li a {
+        border-bottom: solid 1px white;
+        &:hover {
+            /*animación del menú*/
+            border-bottom: solid 1px $primaryColor;
+        }
+    }
+}
+
+.logo {
+    height: 35px;
+}
+
+.container-footer {
+    @include fontWhite;
+    font-size: map-get($fontSize, xs);
+    font-weight: map-get($fontWeight, regular);
+    background-color: #333333;
+    max-width: 100%;
+}
+.container-contacto{
+    ul li{
+        list-style: none;   
+    }
+}
+.container-redes-sociales {
+    ul {
+        width: 60%;
+        li {
+            display: inline-block;
+            a {
+                font-size: map-get($fontSize, md);
+                color: white;
+                &:hover {
+                    color: $focusColor;
+                }
+            }
+        }
+    }
+}
+
+.container-copyright {
+    background-color: #373737;
+    p {
+        margin: 0;
+        font-size: map-get($fontSize, xxs);
+
+        span {
+            font-weight: map-get($fontWeight, semibold);
+        }
     }
 }
 
 .zoom {
     transition: all 0.2s ease;
-    &:hover {
-        transform: scale(1.1);
-    }
+}
+.zoom:hover {
+    transform: scale(1.1);
 }
 
-.containerTextReceta {
-    right: 0;
-    width: 50%;
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2343B692' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
 
-.tituloReceta {
-    @include fontsStyle;
-    font-size: map-get($fontSize, large);
-    margin: 10px;
-    color: $colorReceta;
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2343B692' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
-.textReceta {
-    font-size: map-get($fontSize, small);
-    @include fontsStyle;
+.border-radius{
+border-radius: $border-radius-sm;
 }
 
-/*footer*/
-.containerContacto {
-    color: $colorFooter;
-}
-
-.containerRedesSociales {
-    color: $colorFooter;
-}
-
-.textFooter {
-    font-style: normal;
-    list-style: none;
-    font-weight: bold;
-}
-
-.redesSociales {
-    li {
-        display: inline-block;
-        margin: 0 10px;
-
-        a {
-            text-decoration: none;
-            color: $colorFooter;
-            font-size: map-get($fontSize, medium);
-            &:hover {
-                color: $colorFocus;
-            }
-        }
-    }
+.img-cover{
+    object-fit: cover;
 }

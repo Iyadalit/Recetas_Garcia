@@ -1,5 +1,31 @@
-@mixin fontsStyle {
-    font-style: normal;
-    text-align: center;
-    font-weight: bold;
+@mixin fontWhite {
+  font-style: normal;
+  color: white;
+}
+
+@mixin fontBlack {
+  font-style: normal;
+  color: black;
+}
+
+@mixin banners {
+  p:nth-child(1) {
+    @include fontWhite;
+    font-size: map-get($fontSize, l);
+    font-weight: map-get($fontWeight, semibold);
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: map-get($fontSize, xl);
+    }
+  }
+
+  p:nth-child(2) {
+    @include fontWhite;
+    font-size: map-get($fontSize, md);
+    font-weight: map-get($fontWeight, regular);
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: map-get($fontSize, l);
+    }
+  }
 }

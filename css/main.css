@@ -1,167 +1,210 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0; }
 
 body {
   font-family: "Montserrat";
-  background-image: url("../assets/fondo.jpg");
-  background-size: cover; }
+  background-color: #e5e5e5; }
 
-/*generales*/
-.layout {
-  display: grid;
-  grid-template-areas: "header" "main" "footer";
-  grid-template-columns: 100%; }
+h1 {
+  font-style: normal;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 2.25rem; } }
 
-.layoutHeader {
-  grid-area: header; }
-
-.layoutContent {
-  grid-area: main;
-  padding-top: 150px;
-  background-color: rgba(255, 255, 255, 0.8); }
-
-.layoutFooter {
-  grid-area: footer; }
-
-/*Header*/
-#header {
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  width: 100%;
-  height: 60px;
-  background-color: #fcf9f9;
-  z-index: 100; }
+h2 {
+  font-style: normal;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 400; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 1.5rem; } }
 
 .customNavbar {
-  background-color: rgba(249, 227, 222, 0.9) !important;
   box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
   -webkit-box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65);
   -moz-box-shadow: 7px 10px 14px -7px rgba(96, 102, 99, 0.65); }
+  .customNavbar ul li a {
+    border-bottom: solid 1px white; }
+    .customNavbar ul li a:hover {
+      /*animación del menú*/
+      border-bottom: solid 1px #43B692; }
 
 .logo {
-  width: 100px; }
+  height: 35px; }
 
-.fontDosis {
-  font-family: "Dosis", sans-serif; }
+.container-footer {
+  font-style: normal;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 400;
+  background-color: #333333;
+  max-width: 100%; }
 
-.fontLobster {
-  font-family: "Lobster"; }
+.container-contacto ul li {
+  list-style: none; }
 
-.customNavbar ul li a:hover {
-  /*animación del menú*/
-  border-bottom: solid 1px #45b39d;
-  color: black !important; }
+.container-redes-sociales ul {
+  width: 60%; }
+  .container-redes-sociales ul li {
+    display: inline-block; }
+    .container-redes-sociales ul li a {
+      font-size: 1.25rem;
+      color: white; }
+      .container-redes-sociales ul li a:hover {
+        color: #b9b9b9; }
 
-/*Platillos*/
-.recetasPrincipal {
-  padding: 50px 20px 50px 20px;
-  background-color: #d8d1d1; }
-
-.cardReceta {
-  margin-top: 30px;
-  margin-bottom: 30px; }
-  .cardReceta a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: italic;
-    color: #0b055a; }
-
-.imagenReceta img {
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  border-radius: 50px; }
+.container-copyright {
+  background-color: #373737; }
+  .container-copyright p {
+    margin: 0;
+    font-size: 0.75rem; }
+    .container-copyright p span {
+      font-weight: 600; }
 
 .zoom {
   transition: all 0.2s ease; }
-  .zoom:hover {
-    transform: scale(1.1); }
 
-.containerTextReceta {
-  right: 0;
-  width: 50%; }
+.zoom:hover {
+  transform: scale(1.1); }
 
-.tituloReceta {
-  font-style: normal;
-  text-align: center;
-  font-weight: bold;
-  font-size: 40px;
-  margin: 10px;
-  color: #0b055a; }
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2343B692' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important; }
 
-.textReceta {
-  font-size: 16px;
-  font-style: normal;
-  text-align: center;
-  font-weight: bold; }
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2343B692' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; }
 
-/*footer*/
-.containerContacto {
-  color: white; }
+.border-radius {
+  border-radius: 1rem; }
 
-.containerRedesSociales {
-  color: white; }
+.img-cover {
+  object-fit: cover; }
 
-.textFooter {
-  font-style: normal;
-  list-style: none;
-  font-weight: bold; }
+.container-receta {
+  padding-top: 90px; }
+  .container-receta a {
+    color: #43B692; }
 
-.redesSociales li {
-  display: inline-block;
-  margin: 0 10px; }
-  .redesSociales li a {
-    text-decoration: none;
+.banner-recetas {
+  background-image: url("../assets/banner-recetas.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  padding-top: 90px; }
+  .banner-recetas p:nth-child(1) {
+    font-style: normal;
     color: white;
-    font-size: 25px; }
-    .redesSociales li a:hover {
-      color: #b9b9b9; }
+    font-size: 1.5rem;
+    font-weight: 600; }
+    @media (min-width: 768px) {
+      .banner-recetas p:nth-child(1) {
+        font-size: 2.25rem; } }
+  .banner-recetas p:nth-child(2) {
+    font-style: normal;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 400; }
+    @media (min-width: 768px) {
+      .banner-recetas p:nth-child(2) {
+        font-size: 1.5rem; } }
 
-.containerReceta {
-  display: flex;
-  flex-direction: row;
-  padding: 0 20px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  min-height: 70vh; }
+.banner {
+  background-image: url("../assets/banner-inicio.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  padding-top: 90px; }
+  .banner p:nth-child(1) {
+    font-style: normal;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600; }
+    @media (min-width: 768px) {
+      .banner p:nth-child(1) {
+        font-size: 2.25rem; } }
+  .banner p:nth-child(2) {
+    font-style: normal;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 400; }
+    .banner p:nth-child(2) span {
+      font-weight: 600; }
+    @media (min-width: 768px) {
+      .banner p:nth-child(2) {
+        font-size: 1.5rem; } }
+  .banner a {
+    background-color: #43B692;
+    border: #43B692;
+    border-radius: 12px; }
+    .banner a:hover {
+      background-color: #45997e; }
 
-.containerPorciones {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .containerPorciones img {
-    width: 100%;
-    border-radius: 50px; }
-  .containerPorciones table {
-    margin-top: 15px;
-    padding: 2rem;
-    background-color: #ccb96e; }
+.container-section {
+  margin-top: 70px;
+  margin-bottom: 70px; }
+  .container-section .card-outline {
+    border-radius: 1rem;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1); }
+    .container-section .card-outline img {
+      border-radius: 1rem 1rem 0 0; }
+  .container-section p:nth-child(1) {
+    font-style: normal;
+    color: black;
+    font-size: 1.37rem;
+    font-weight: 600; }
+  .container-section p {
+    font-size: 0.875rem;
+    font-weight: 400; }
+  .container-section p:nth-child(4) {
+    font-style: normal;
+    color: black;
+    font-size: 1.125rem;
+    font-weight: 400; }
+  .container-section a {
+    color: #43B692; }
 
-.tituloBanner {
-  font-size: 30px;
-  font-style: normal;
-  text-align: center;
-  font-weight: bold; }
+.btn-limpiar {
+  border: solid 1.5px #43B692;
+  color: #43B692;
+  border-radius: 1rem; }
+  .btn-limpiar:hover {
+    background-color: #45997e;
+    border: solid 1.5px #45997e; }
 
-.tituloCarrusel {
-  font-size: 30px;
-  font-style: normal;
-  text-align: center;
-  font-weight: bold; }
+.btn-enviar {
+  color: white;
+  border-radius: 1rem;
+  background-color: #43B692;
+  border: solid 1.5px #43B692; }
+  .btn-enviar:hover {
+    background-color: #45997e;
+    border: solid 1.5px #45997e; }
 
-.imgCarrusel {
-  width: 60%;
-  border-radius: 10%;
-  max-height: 400px;
-  box-shadow: 10px 10px 5px 0px rgba(142, 143, 176, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(142, 143, 176, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(142, 143, 176, 0.75); }
+.banner-nosotros {
+  background-image: url("../assets/banner-somos.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  padding-top: 90px; }
+  .banner-nosotros p:nth-child(1) {
+    font-style: normal;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600; }
+    @media (min-width: 768px) {
+      .banner-nosotros p:nth-child(1) {
+        font-size: 2.25rem; } }
+  .banner-nosotros p:nth-child(2) {
+    font-style: normal;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 400; }
+    @media (min-width: 768px) {
+      .banner-nosotros p:nth-child(2) {
+        font-size: 1.5rem; } }
